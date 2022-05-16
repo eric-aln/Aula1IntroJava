@@ -6,6 +6,8 @@ public class ExLacos {
 
 	public static void main(String[] args) {
 		
+		//4- Faça um programa que entre com três números e coloque em ordem crescente.
+
 		int a,b,c;
 		
 		Scanner leia = new Scanner(System.in);
@@ -33,6 +35,7 @@ public class ExLacos {
 		{
 				System.out.println("Ordem crescente:",+a+" , "+c+" , "+b+);
 		}
+		
 		}
 
 	}
