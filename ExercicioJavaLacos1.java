@@ -4,35 +4,35 @@ public class ExercicioJavaLacos1
 {
 
 	public static void main(String[] args) {
-		// Exercício 1 Laços de decisão
-		// Determinar o maior de 3 numeros
 		
-		Scanner teclado = new Scanner(System.in);
+		// 2 - Maior e Menor
 		
-        System.out.printf("Qual o primeiro numero? %n");
-        double x1 = teclado.nextDouble();
-        System.out.printf("Qual o segundo numero? %n");
-        double x2 = teclado.nextDouble();
-        System.out.printf("Qual o terceiro numero? %n");
-        double x3 = teclado.nextDouble();
-        double max;
-        
-        max = x1;
-        
-        if (max > x2) 
-        {
-            if (max > x3) 
-            {
-                System.out.printf("O maior é %d",x1);
-            }
-            else
-            {
-                System.out.printf("o maior é %d",x3);
-            }  
-            
-            {
-            System.out.printf("o maior é %",x2);
-            }
-	}
+		try (Scanner leia = new Scanner(System.in)) {
+			int menor = 0;
+			int maior = 0;
+			System.out.println(" Tres números:");
+			int a = leia.nextInt();
+			int b = leia.nextInt();
+			int c = leia.nextInt();
+			
+			if((a < b) && (a < c))
+			    menor = a;
 
-}}
+			else if((b < a)&&(b < c))
+			    menor = b;
+
+			else if((c < a)&&(c < b))
+			    menor = c;
+
+			if((a > b) && (a > c))
+			    maior = a;
+
+			else if((b > a)&&(b > c))
+			    maior = b;
+
+			else if((c > a)&&(c > b))
+			    maior = c;
+			System.out.println(" Maior: " + maior + " Menor:" + menor);
+		}
+	}
+}
